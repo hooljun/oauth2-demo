@@ -8,11 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
+
 /**
  * Created by xujingfeng on 2017/8/7.
  */
 @RestController
 public class TestEndpoints {
+
+    @GetMapping("/me")
+    public Principal getCurrentLoggedInUser(Principal user) {
+        return user;
+    }
+
 
     @GetMapping("/product/{id}")
     public String getProduct(@PathVariable String id) {

@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8899
 
 
 spring:
@@ -19,8 +19,7 @@ spring:
 #  level:
 #    jdbc: error
 #    jdbc.sqltiming: info
-
-#security:
-#  oauth2:
-#    resource:
-#      filter-order: 3
+security:
+  oauth2:
+    resource:
+      filter-order: 3
