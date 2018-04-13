@@ -81,11 +81,11 @@ public class OAuth2ServerConfig {
                     .authorities("client")
                     .secret("123456")
                     .and().withClient("client_3")
-//                    .resourceIds(DEMO_RESOURCE_ID)
+                    .resourceIds(DEMO_RESOURCE_ID)
                     .authorizedGrantTypes("authorization_code", "refresh_token")
                     .scopes("select")
                     .authorities("client")
-                    .redirectUris("http://localhost:88")
+//                    .redirectUris("http://localhost:88")
                     .secret("123456")
             ;
         }

@@ -13,7 +13,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
-//@Order(-20)
+@Order(-20)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 //    @Bean
@@ -44,8 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/profile").authenticated()
-                .and().formLogin().permitAll();
+                .antMatchers("/profile").authenticated();
         // @formatter:on
     }
 
